@@ -20,6 +20,6 @@ class WhatsAppNotifier:
                 to=f"whatsapp:{self.my_number}",
                 body=message
             )
-            print(f"✅ Message sent successfully! SID: {msg.sid}")
+            print(f"Message sent successfully! SID: {msg.sid}")
         except Exception as e:
-            print(f"❌ Error sending WhatsApp message: {e}")
+            print(f"Error sending WhatsApp message: {e}")
