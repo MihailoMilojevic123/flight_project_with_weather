@@ -90,18 +90,18 @@ for i in range(len(iata_codes)):
                         check_out_date = first_offer.get("checkOutDate", end_date)
                         name = h.get("name", "Unknown hotel name")
 
-                        print(f"✅ Pronađena ponuda za hotel: {name} ({hotel_id})")
+                        print(f"Pronađena ponuda za hotel: {name} ({hotel_id})")
 
                         # --- Format WhatsApp message ---
                         message = (
-                            f"🌤️ *Good destination found!*\n\n"
-                            f"🏙️ City: *{flight['cityCode']}*\n"
-                            f"✈️ Airport: *{flight['airport']}*\n"
-                            f"💵 Flight Price: *{flight['price']} EUR*\n"
-                            f"📅 Dates: {check_in_date} → {check_out_date}\n"
-                            f"💶 Hotel: *{name}*\n"
-                            f"💵 Price: {total_price} {currency}\n"
-                            f"☀️ Weather score: *{score}*\n"
+                            f" *Good destination found!*\n\n"
+                            f" City: *{flight['cityCode']}*\n"
+                            f" Airport: *{flight['airport']}*\n"
+                            f" Flight Price: *{flight['price']} EUR*\n"
+                            f" Dates: {check_in_date} → {check_out_date}\n"
+                            f" Hotel: *{name}*\n"
+                            f" Price: {total_price} {currency}\n"
+                            f" Weather score: *{score}*\n"
                         )
 
                         # --- Send WhatsApp message ---
@@ -112,11 +112,11 @@ for i in range(len(iata_codes)):
 
             # If no hotels found
             if not found_offer:
-                print("❌ No available offers from hotels.")
+                print(" No available offers from hotels.")
 
         # --- If weather is bad, skip destination ---
         else:
-            print("🌧️ Bad weather – skip this destination.")
+            print(" Bad weather – skip this destination.")
 
 
 
